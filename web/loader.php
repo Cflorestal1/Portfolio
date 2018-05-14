@@ -13,4 +13,9 @@
 		}
 	});
 
+	$local  = new Twig_Function('local', function(){
+		echo __DIR__;
+	});
+
 	$twig->addFunction($key);
+	$twig->addFunction($local);
