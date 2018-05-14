@@ -1,16 +1,18 @@
-<nav>
-	<ul>
-		{% for item in nav %}
-			<li>
-				<a href="{{ item.href }}" class="">{{ item.pg }}</a>
-				{% if 'dd' in item %}
-					<div class="">
-						{% for links in item.dd %}
-							<a href="{{ links.href }}">{{ links.sec}}</a>
-						{% endfor %}
-					</div>
-				{% endif %}
-			</li>
-		{% endfor %}
-	</ul>
-</nav>
+<div class="nav-panel">
+	<nav>
+		<ul>
+			{% for item in nav %}
+				<li class="dd-menu">
+					<a href="{{ item.href }}" class="dd-btn">{{ item.pg }}</a>
+					{% if 'dd' in item %}
+						<div class="dd-content">
+							{% for links in item.dd %}
+								<a href="{{ links.href }}">{{ links.sec}}</a>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>

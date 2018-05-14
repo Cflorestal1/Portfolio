@@ -4,3 +4,34 @@ header {
 	position: relative;
 	background-color: #99004D;
 }
+
+nav ul {
+	list-style-type: none;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+nav ul li {
+	display: inline;	
+}
+
+nav ul li:nth-child(2) {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	background-color: none;
+	color: white;
+}
+
+.nav-panel {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	margin-right: 50px;
+	background-color: none;
+}
+ 
+
