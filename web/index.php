@@ -8,7 +8,7 @@
 	];
 
 	
-	$css = ['header','footer','home','projects','contact'];
+	$styles = ['header','footer','home','projects','contact'];
 
 
-	echo $twig->render('base.html',['nav' => $nav, 'css' => $css]);
+	echo $twig->render('base.html',['nav' => $nav, 'styles' => $styles ]);
