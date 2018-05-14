@@ -4,7 +4,7 @@
 			{% for item in nav %}
 				<li class="dd-menu">
 					<a href="{{ item.href }}" class="dd-btn">{{ item.pg }}</a>
-					{% if 'dd' in item %}
+					{% if 'dd' is defined %}
 						<div class="dd-content">
 							{% for links in item.dd %}
 								<a href="{{ links.href }}">{{ links.sec}}</a>

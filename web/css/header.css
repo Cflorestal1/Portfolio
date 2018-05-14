@@ -34,4 +34,30 @@ nav ul li a:hover {
 	background-color: none;
 }
  
+.dd-btn, .dd-content a {
+	text-decoration: none;
+	font-family: "Times New Roman", sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: black;
+}
+
+.dd-content {
+	display: none; 	
+	position: absolute;
+	z-index: 1;
+}
+
+.dd-menu:hover .dd-content {
+	display: block;
+}
+
+nav ul li:nth-child(2) .dd-content{
+	position: absolute;
+	left: 100px;
+}
+
+.active {
+	color: white;
+}
 
