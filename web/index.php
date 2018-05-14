@@ -9,6 +9,6 @@
 
 	
 	$styles = ['header','footer','home','projects','contact'];
+	$scripts = ['header','home','projects','contact'];
 
-
-	echo $twig->render('base.html',['nav' => $nav, 'styles' => $styles ]);
+	echo $twig->render('base.html',['nav' => $nav, 'styles' => $styles, 'scripts' => $scripts ]);

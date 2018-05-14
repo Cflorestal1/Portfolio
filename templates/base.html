@@ -5,7 +5,11 @@
     		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		{% %}{% %}
+		{% block link %}
+			{% for style in styles %}
+				<link rel="stylesheet" href="/Portfolio/web/css/{{ style }}.css" />
+			{% endfor %}
+		{% endblock %}
 	</head>
 	<body>
 		<header>
