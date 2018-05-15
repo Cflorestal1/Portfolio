@@ -1,0 +1,23 @@
+version: "3"
+services:
+    app:
+        image: php:7.0.30-apache
+        ports:
+            - "8880:80"
+        container_name: php-container
+        environment:
+            APACHE_DOCUMENT_ROOT: '/var/www/html/web'
+            #        command: sed -ri -e 's/\/var\/www\/html/${APACHE_DOCUMENT_ROOT}/g' /etc/apache2/sites-available/000-default.conf && apache2-foreground
+        volumes:
+            - ./:/var/www
+            - ./web:/var/www/html
+              #        command: sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+              #        command: sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+
+    composer:
+        restart: 'no'
+        image: composer/composer:php7
+        command: install
+        volumes:
+          - .:/app
