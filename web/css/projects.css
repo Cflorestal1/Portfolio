@@ -7,3 +7,11 @@
 	height: 550px;
 	background-color: white;
 }
+
+#electronic span, #others span  {
+	color: white;
+}
+
+#hardware {
+	color: black;
+}

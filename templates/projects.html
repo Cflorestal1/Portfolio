@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-	<section id="{{ projects.section.sec1 }}"></section>
-	<section id="{{ projects.section.sec2 }}"></section>
-	<section id="{{ projects.section.sec3 }}"></section>
+	<section id="{{ projects.section.sec1.id }}">
+		<div class="container">
+			<div class="row">
+				<span class="h3 sub">{{  projects.section.sec1.subtitle }}</span>
+			</div>
+		</div>
+	</section>
+	<section id="{{ projects.section.sec2.id }}">
+		<div class="container">
+			<div class="row">
+				<span class="h3 sub">{{  projects.section.sec2.subtitle }}</span>
+			</div>
+		</div>
+	</section>
+	<section id="{{ projects.section.sec3.id }}">
+		<div class="container">
+			<div class="row">
+				<span class="h3 sub">{{  projects.section.sec3.subtitle }}</span>
+			</div>
+		</div>
+	</section>
 {% endblock %}

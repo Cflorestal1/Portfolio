@@ -1,1 +1,28 @@
+{# function for generating text input element #}
+{% macro textfield(name,class,placeholder) %}
+	<input type="text" class="{{ class|e }}" name="{{ name|e }}" placeholder="{{ placeholder|default('') }}" />
+{% endmacro %}
 
+{# function for generating submit button input element #}
+{% macro button(name,class,value) %}
+	<input type="submit" name="{{ name|e }}" class="{{ class|e }}" value="{{ value|e }}"/>
+{% endmacro %}
+
+{# function for generating select options element #}
+{% macro options(id,class,values) %}
+	<select id="{{ id|e }}" class="{{ class|e }}">
+		{% for v in values %}
+			<option>{{ v }}</option>
+		{% endfor %}
+	</select>
+{% endmacro %}
+
+{# function for generating input element #}
+{% macro input(name,class,type,placeholder) %}
+	<input type="{{ type|e }}" name="{{ name|e }}" class="{{ class|e }}" placeholder="{{ placeholder|default('') }}" />
+{% endmacro %}
+
+{# function for generating textarea element #}
+{% macro textarea(name,class,rows,placeholder) %}
+	<textarea name="{{ name|e }}" class="{{ class|e }}" rows="{{ rows|e }}" placeholder="{{ placeholder|e }}" ></textarea>
+{% endmacro %}

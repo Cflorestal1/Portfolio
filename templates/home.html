@@ -2,7 +2,25 @@
 
 {% block content %}
 
-	<section id="{{ home.section.sec1 }}"></section>
-	<section id="{{ home.section.sec2 }}"></section>
-	<section id="{{ home.section.sec3 }}"></section>
+	<section id="{{ home.section.sec1.id }}">
+		<div class="container">
+			<div class="row">
+				<span class="h3 sub">{{ home.section.sec1.subtitle }}</span>	
+			</div>
+		</div>
+	</section>
+	<section id="{{ home.section.sec2.id }}">
+		<div class="container">
+			<div class="row">
+				<span class="h3 sub">{{ home.section.sec2.subtitle }}</span>
+			</div>
+		</div>
+	</section>
+	<section id="{{ home.section.sec3.id }}">
+		<div class="container">
+			<div class="row">
+				<span class="h3 sub">{{ home.section.sec3.subtitle }}</span>
+			</div>
+		</div>
+	</section>
 {% endblock %}

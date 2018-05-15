@@ -14,3 +14,10 @@ html,body {
 }
 
 
+#intro span, #education span {
+	color: white;
+}
+
+#about span {
+	color: black;
+}
