@@ -1,5 +1,6 @@
 <?php 
-	include '../loader.php';
+	require_once '../loader.php';
+
 	$projects = [
 		'section' => [
 			'sec1' => [

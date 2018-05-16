@@ -4,7 +4,7 @@
 	$nav = [
 		[
 			'pg' => 'Home',
-			'href' => '/',
+			'href' => '/Portfolio/web',
 			'dd' => [[
 					'sec' => 'Introduction',
 					'href' => '#intro'
@@ -20,7 +20,7 @@
 		],
 		[
 			'pg' => 'Projects',
-			'href' => '/projects',
+			'href' => '/Portfolio/web/projects',
 			'dd' => [[
 					'sec' => 'Electronic',
 					'href' => '#electronic'
@@ -37,7 +37,7 @@
 		],
 		[
 			'pg' => 'Contact Me',
-			'href' => '/Portfolio/templates/contact.html'
+			'href' => '/Portfolio/web/contact'
 		]
 	];
 
