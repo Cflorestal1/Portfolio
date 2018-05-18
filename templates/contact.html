@@ -1,5 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-	{% embed 'cform.twig' %}{% endembed %}
+	<div class="form-container">
+		<form>
+			<div class="container">
+				<div class="row">
+					{% import 'functions.html' as forms %}
+					{% set bool = false %}
+					
+					{% for item in contact.form %}
+						<div class="{{ item.gclass }}">
+							{% if item.label is defined %}
+								<label for="{{ item.for }}">{{ item.label }}{% if item.special == 'required' %}<span class="required"> *</span>{% endif %}</label>
+							{% endif %}
+							{% if item.type == 'text' %}
+								{% if item.special == 'required' %}
+									{% set bool = true %}
+								{% else %}
+									{% set bool = false %}
+								{% endif %}
+								{{ forms.textfield(item.name,item.class,item.placeholder, bool) }}
+							{% elseif item.type == 'submit' %}
+								{{ forms.button(item.name,item.class,item.value) }}
+							{% elseif item.type == 'opt' %}
+								{{ forms.options(item.id,item.class,item.op) }}
+							{% elseif item.type == 'textarea' %}
+								{% if item.special == 'required' %}
+									{% set bool = true %}
+								{% else %}
+									{% set bool = false %}
+								{% endif %}
+
+								{{ forms.textarea(item.name,item.class,item.rows, item.placeholder,bool) }}
+							{% else %}
+								{% if item.special == 'required' %}
+									{% set bool = true %}
+								{% else %}
+									{% set bool = false %}
+								{% endif %}
+
+								{{ forms.input(item.name,item.class,item.type,item.placeholder,bool) }}
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</form>
+	</div>
 {% endblock %}

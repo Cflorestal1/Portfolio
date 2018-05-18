@@ -1,6 +1,6 @@
 {# function for generating text input element #}
-{% macro textfield(name,class,placeholder) %}
-	<input type="text" class="{{ class|e }}" name="{{ name|e }}" placeholder="{{ placeholder|default('') }}" />
+{% macro textfield(name,class,placeholder,required) %}
+	<input type="text" class="{{ class|e }}" name="{{ name|e }}" placeholder="{{ placeholder|default('') }}" {% if required == true %}{{ required }}{% endif %} />
 {% endmacro %}
 
 {# function for generating submit button input element #}
@@ -18,11 +18,11 @@
 {% endmacro %}
 
 {# function for generating input element #}
-{% macro input(name,class,type,placeholder) %}
-	<input type="{{ type|e }}" name="{{ name|e }}" class="{{ class|e }}" placeholder="{{ placeholder|default('') }}" />
+{% macro input(name,class,type,placeholder,required) %}
+	<input type="{{ type|e }}" name="{{ name|e }}" class="{{ class|e }}" placeholder="{{ placeholder|default('') }}" {% if required == true %}{{ required }}{% endif %} />
 {% endmacro %}
 
 {# function for generating textarea element #}
-{% macro textarea(name,class,rows,placeholder) %}
-	<textarea name="{{ name|e }}" class="{{ class|e }}" rows="{{ rows|e }}" placeholder="{{ placeholder|e }}" ></textarea>
+{% macro textarea(name,class,rows,placeholder,required) %}
+	<textarea name="{{ name|e }}" class="{{ class|e }}" rows="{{ rows|e }}" placeholder="{{ placeholder|e }}" {% if required == true %}{{ required }}{% endif %} ></textarea>
 {% endmacro %}

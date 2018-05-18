@@ -83,7 +83,8 @@
 				'gclass' => 'form-group col-sm-12 col-lg-6',
 				'name' => 'firstname',
 				'type' => 'text',
-				'class' => 'form-control'		
+				'class' => 'form-control',
+				'special' => 'required'		
 			],
 			[
 				'label' => 'Last name:',
@@ -91,7 +92,8 @@
 				'gclass' => 'form-group col-sm-12 col-lg-6',
 				'name' => 'lastname',
 				'type' => 'text',
-				'class' => 'form-control'
+				'class' => 'form-control',
+				'special' => 'required'		
 			],
 			[
 				'label' => 'Preferred reply method:',
@@ -108,7 +110,8 @@
 				'gclass' => 'form-group col-sm-12 col-lg-6',
 				'name' => 'email',
 				'type' => 'email',
-				'class' => 'form-control'
+				'class' => 'form-control',
+				'special' => 'required'		
 			], 
 			[
 				'label' => 'Phone number:',
@@ -124,7 +127,8 @@
 				'gclass' => 'form-group col-lg-12',
 				'type' => 'opt',	
 				'class' =>  'form-control sel-block',
-				'op' => ['Job offer','Product inquiry','Product support','Other']	
+				'op' => ['Job offer','Product inquiry','Product support','Other'],
+				'special' => 'required'			
 
 			],
 			[
@@ -134,7 +138,8 @@
 				'name' => 'details',
 				'type' => 'textarea',
 				'class' => 'form-control',
-				'rows' => 4
+				'rows' => 4,
+				'special' => 'required'		
 	
 			],
 			[
@@ -152,7 +157,7 @@
 	$styles = ['header','footer','home','projects','contact'];
 	$scripts = ['header','home','projects','contact'];
 
-	echo $twig->render('home.html',['nav' => $nav, 
+	echo $twig->render('contact.html',['nav' => $nav, 
 		'styles' => $styles, 
 		'scripts' => $scripts,
 		'home' => $home,

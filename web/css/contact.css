@@ -1,3 +1,7 @@
+label {
+	font-weight: bold;
+}
+
 .submit-btn {
 	padding: 15px 20px 15px 20px;
 	border-radius: 8px;
@@ -24,3 +28,6 @@
 	margin: 50px auto;
 }
 
+.required {
+	color: red;
+}
