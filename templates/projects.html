@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block link %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+{% endblock %}
+
 {% block content %}
 	<section id="{{ projects.section.sec1.id }}">
 		<div class="container">
@@ -21,4 +26,14 @@
 			</div>
 		</div>
 	</section>
+	<div class="modal">
+		<div class="modal-bg closer"></div>
+		<div class="modal-main">
+			<i class="fa fa-close exit closer"></i>
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

@@ -151,13 +151,13 @@
 			]
 
 		]
-	
+
 	];
 	
-	$styles = ['header','footer','home','projects','contact'];
-	$scripts = ['header','home','projects','contact'];
+	$styles = ['header','footer','home','projects','contact','modal'];
+	$scripts = ['header','home','projects','contact','modal','functions'];
 
-	echo $twig->render('contact.html',['nav' => $nav, 
+	echo $twig->render('projects.html',['nav' => $nav, 
 		'styles' => $styles, 
 		'scripts' => $scripts,
 		'home' => $home,
